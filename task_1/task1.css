@@ -1,0 +1,83 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("home_background.jpg"); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.b1 {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0)
+    );
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .b1:hover {
+    background-color: rgba(255, 0, 0, 1);
+  }
+  
+  .b1:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+  .content {
+    padding: 16px;
+    margin-top: 60px; /* Adjust margin to avoid content overlap with navbar */
+    text-align: center;
+    color: white;
+}
+/* Content area */
+.content h1 {
+    font-size: 50px;
+    color: rgb(235, 167, 31);
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.content p {
+    font-size: 24px;
+    color: rgb(192, 7, 233);
+    text-shadow: 2px 2px 4px #000000;
+}
+.navbar {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+}
+
+.navbar button {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #f2f2f2; /* White border */
+    color: #f7bdbd;
+    padding: 14px 20px;
+    margin: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+.navbar button:hover {
+    background-color: #ddd;
+    color: black;
+}
