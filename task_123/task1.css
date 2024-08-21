@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url("home_background.jpg"); /* Replace with your background image */
+    background-image: url("home_background.png"); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,17 +52,17 @@ body, html {
 
 .content p {
     font-size: 24px;
-    color: rgb(192, 7, 233);
+    color: rgb(179, 44, 98);
     text-shadow: 2px 2px 4px #000000;
 }
 .navbar {
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.224); /* Semi-transparent background */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
-    text-align: center;
+    text-align: left;
 }
 
 .navbar button {
@@ -78,6 +78,6 @@ body, html {
 }
 
 .navbar button:hover {
-    background-color: #ddd;
+    background-color: #f9f9f9;
     color: black;
 }
