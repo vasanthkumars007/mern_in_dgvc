@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home_file</title>
-    <link rel="stylesheet" href="task1.css">
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>  
     <div class="navbar">
-        <a href="D:\mern\task_1\home.html"><button class="b1" >Home</button></a>
-        <a href="D:\mern\task_1\gallery.html"><button class="b1" >Gallery</button></a>
-        <a href="D:\mern\task_1\login.html"><button class="b1" >Login</button></a>
-        <a href="D:\mern\task_1\contacts.html"><button class="b1">Contact</button></a>
-        <a href="D:\mern\task_1\register.html"><button class="b1" >Register</button></a>
+        <a href="D:\mern\task_123\home.html"><button class="b1" >Home</button></a>
+        <a href="D:\mern\task_123\gallery.html"><button class="b1" >Gallery</button></a>
+        <a href="D:\mern\task_123\login.html"><button class="b1" >Login</button></a>
+        <a href="D:\mern\task_123\contacts.html"><button class="b1">Contact</button></a>
+        <a href="D:\mern\task_123\register.html"><button class="b1" >Register</button></a>
     </div>
+        <div>
+        <h1>Register</h1>
+        <div class="div1">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <button  id="getapi"  type="submit">Register</button>
+        </div>
+        <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        <a href="home.html">Back to Home</a>
+        
+    <script>
+        async function getapi(){
+            let data2 = {
+        "username": document.getElementById("username").value,
+        "password": document.getElementById("password").value,
+        "email": document.getElementById("email").value
+    }
+             let res = await fetch("https://reqres.in/api/users" ,{"method" :"POST",body:JSON.stringify(data2),headers:{"content-type":"application/json"}});
+             let json = await res.json();
+             console.log(json);
+         }
+         document.getElementById("getapi").addEventListener("click",getapi);
+    </script>
+</body>    
 </html>

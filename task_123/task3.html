@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Input Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter a Value</h1>
+        <form id="myForm">
+            <input type="text" id="myTextbox" placeholder="Enter something...">
+            <button type="button" onclick="addToArray()">Add to Array</button>
+        </form>
+    </div>
+
+    <script>
+        // Initialize an empty array
+        let valuesArray = [];
+
+        function addToArray() {
+            // Get the value from the textbox
+            let value = document.getElementById('myTextbox').value;
+
+            // Add the value to the array
+            valuesArray.push(value);
+
+            // Log the current state of the array to the console
+            console.log(valuesArray);
+
+            // Clear the textbox
+            document.getElementById('myTextbox').value = '';
+        }
+    </script>
+</body>
+</html>

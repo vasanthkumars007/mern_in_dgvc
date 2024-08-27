@@ -68,7 +68,7 @@ body, html {
 .navbar button {
     background-color: transparent; /* Transparent background */
     border: 2px solid #f2f2f2; /* White border */
-    color: #f7bdbd;
+    color: #000000;
     padding: 14px 20px;
     margin: 10px;
     font-size: 17px;
@@ -76,8 +76,46 @@ body, html {
     transition: background-color 0.3s, color 0.3s;
     text-transform: uppercase; /* Make text uppercase */
 }
-
+ 
 .navbar button:hover {
     background-color: #f9f9f9;
     color: black;
 }
+/*gallery*/
+.grid{
+  position: absolute;
+  top:120px;
+  left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: auto  ;
+  row-gap: 80px;
+  column-gap: 90px;
+}
+.one img{
+ 
+  margin:10px 10px 10px 60px;
+  width: 200px;
+  height: 200px; 
+}
+.grid .one img{
+  animation-name: image;
+  animation-timing-function:ease-in; 
+  animation-duration:5s;
+}
+@keyframes image{
+  0%{
+      transform:  perspective(100px) translateZ(-50px);
+  }
+  50%{
+      transform: translateZ(100px);
+  }
+  100%{
+      transform: translateZ(200px);
+  }
+  }
+  .grid img:hover{
+      border: 3px solid rgb(20, 19, 19);
+      transform: scale(0.5);
+  }
+  
